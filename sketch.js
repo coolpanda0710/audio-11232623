@@ -29,7 +29,8 @@ function setup() {
   // Start classifying
   // The sound model will continuously listen to the microphone
   ThunkableWebviewerExtension.postMessage("ready");
-    classifi.classify(gotResult}
+    classifier.classify(gotResult);
+}
 
 function draw() {
   background(0);
@@ -52,4 +53,5 @@ function gotResult(error, results) {
   label = results[0].label;
 ThunkableWebviewerExtension.postMessage("label");
 }
+
 
